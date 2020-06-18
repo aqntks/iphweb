@@ -1,5 +1,7 @@
-package com.iph.domain.posts;
+package com.iph.domain2.posts;
 
+import com.iph.domain.posts.Posts;
+import com.iph.domain.posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
