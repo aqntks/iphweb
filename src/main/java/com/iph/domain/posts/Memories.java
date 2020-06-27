@@ -17,13 +17,15 @@ public class Memories extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 500, nullable = false)
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String date;
 
     @Column(columnDefinition = "TEXT", nullable = false)
+    private String place;
+
+    @Column
     private String content;
 
-    private String place;
 
     @Builder
     public Memories(String date, String place, String content){

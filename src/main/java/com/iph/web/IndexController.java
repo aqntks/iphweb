@@ -34,10 +34,4 @@ public class IndexController {
 
         return "posts-update";
     }
-
-    @GetMapping("/home")
-    public String home(Model model) {
-        model.addAttribute("memories", memoriesService.findAllDesc());
-        return "home";
-    }
 }

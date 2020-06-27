@@ -1,7 +1,6 @@
 package com.iph.web.dto;
 
-import com.iph.domain.posts.Memories;
-import com.iph.domain.posts.Posts;
+import com.iph.domain.posts.Memories;;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
