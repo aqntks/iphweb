@@ -1,5 +1,6 @@
 package com.iph.web;
 
+import com.iph.service.posts.MemoriesService;
 import com.iph.service.posts.PostsService;
 import com.iph.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class IndexController {
 
     private final PostsService postsService;
+    private final MemoriesService memoriesService;
 
     @GetMapping("/")
     public String index(Model model) {
@@ -31,5 +33,11 @@ public class IndexController {
         model.addAttribute("post", dto);
 
         return "posts-update";
+    }
+
+    @GetMapping("/home")
+    public String home(Model model) {
+        model.addAttribute("memories", memoriesService.findAllDesc());
+        return "home";
     }
 }
